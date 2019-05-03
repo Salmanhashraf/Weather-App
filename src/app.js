@@ -24,7 +24,7 @@ app.use(express.static(publicDirPath)); //use static pages from specific folder
 app.get('', (req, res) => { //index.html will always take precedence in being served for a route directory
     res.render('index', { //view engines automatically check views folder so no need to set path
         title: 'Weather',
-        name: 'Andrew'
+        name: 'Salman'
     }); 
 });
 
@@ -32,7 +32,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         message: 'Do you need any help',
         title: 'Help',
-        name: 'Andrew'
+        name: 'Salman'
 
     })
 });
