@@ -1,4 +1,3 @@
-console.log('Client side javascript file is loaded!');
 
 fetch('http://puzzle.mead.io/puzzle').then((response) => { //fetch for client side js. .then is used to provide a callback response is then parsed and logged to console
     response.json().then((data) => {  
