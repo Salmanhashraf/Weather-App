@@ -6,6 +6,8 @@ const forecast = require('./utils/forecast');
 
 
 const app = express();
+const port = process.env.PORT || 3000; //env for heroku or 3000 for local
+
 const publicDirPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');//changes the path for views directory and calls it templates 
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -92,6 +94,6 @@ app.get('*', (req, res) => { //get for anything that hasn't been explicitly code
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server has started')
+app.listen(port, () => {
+    console.log('Server has started');
 });

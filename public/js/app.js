@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {//e is event object
     e.preventDefault(); //prevents the default behavior. In this case that means prevents the page from refreshing when submitting form which prevents the console.log from showing up for more than 1 second
 
     const location = search.value; //stores value of input onto location
-    const fetchUrl = 'http://localhost:3000/weather?address=' + location;
+    const fetchUrl = '/weather?address=' + location;
 
     messageOne.textContent = 'loading...'
     messageTwo.textContent = ''
