@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit', (e) => {//e is event object
                 messageTwo.textContent = ' ';
             } else {
                 messageOne.textContent = data.location;
-                messageTwo.textContent = data.forecast;
+                messageTwo.textContent = data.forecast + " The high for the day is " + data.tempHigh + " The low for the day is " + data.tempLow;
             }
         });
     });

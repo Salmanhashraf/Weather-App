@@ -9,7 +9,9 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find the given coordinates', undefined);
         } else {
             callback(undefined, {
-                summary: body.daily.summary
+                summary: body.daily.summary,
+                tempHigh: body.daily.data[0].temperatureHigh,
+                tempLow: body.daily.data[0].temperatureLow
             });
         }
     });
